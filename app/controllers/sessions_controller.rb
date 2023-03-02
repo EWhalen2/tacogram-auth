@@ -4,5 +4,6 @@ class SessionsController < ApplicationController
   
   def create
     # TODO: authenticate user
+    if BCrypt::Password.new(@user["password"]) == params["password"]
   end
 end
